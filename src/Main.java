@@ -1,3 +1,6 @@
+import java.sql.Array;
+import java.util.Arrays;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -20,6 +23,13 @@ public class Main {
 
         int[][] data3 = null;
 
+        int[][] data4 ={
+            {1,2,3},
+            null,
+            {7,8}
+        };
+
+
 
         class Random {
             public void randomLoop(int [][] arr) {
@@ -28,11 +38,9 @@ public class Main {
                 double x = Math.random();
                 if (x < 0.5) {
                     nestedLoopsPrintable.print(arr);
-                    System.out.println("Это реализация NestedLoopsPrintableImpl");
                     System.out.println();
                 } else {
                     singleLoopPrintable.print(arr);
-                    System.out.println("Это реализация SingleLoopPrintableImpl");
                     System.out.println();
                 }
             }
@@ -41,6 +49,8 @@ public class Main {
         Random random = new Random();
         random.randomLoop(data);
         random.randomLoop(data1);
-
+        random.randomLoop(data2);
+        random.randomLoop(data3);
+        random.randomLoop(data4);
     }
 }
